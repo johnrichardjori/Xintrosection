@@ -69,6 +69,7 @@ header {
 .overlay {
   display: none;
   position: fixed;
+  opacity: 0;
 
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -77,6 +78,7 @@ header {
 
 .overlay.show {
   display: block;
+  opacity: 1;
 }
 
 .mobile-nav {
