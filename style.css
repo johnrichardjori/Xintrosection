@@ -1,0 +1,99 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.link-open .dropdown-list {
+  display: block;
+}
+
+.registration button {
+  margin-left: 1rem;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 999;
+}
+
+.overlay .mobile-nav {
+  background: white;
+  padding: 2rem;
+  height: 100%;
+  width: 250px;
+  position: absolute;
+  right: 0;
+}
+
+.overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+.text-content {
+  padding: 2rem;
+}
+
+.clients img {
+  margin: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  nav,
+  .registration {
+    display: none;
+  }
+  .open-menu {
+    display: block;
+  }
+}
